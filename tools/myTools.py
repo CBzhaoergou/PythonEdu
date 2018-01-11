@@ -370,6 +370,7 @@ class TkinterGui():
             
             self.lockhandelUi(True)
 
+            print(self.git_ui.path.get())
             obj1 = subprocess.Popen(cmd,
                             shell = True,
                             cwd = self.git_ui.path.get(),
@@ -427,6 +428,7 @@ class TkinterGui():
                 return
             else:
                 print(cmd)
+
             t = threading.Thread(target=myinsertInfo_des,args=(cmd,))
             t.setDaemon(True)
             t.start()

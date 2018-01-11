@@ -21,11 +21,12 @@ str1 = "Xcode"
 ituns = appscript.app(str1)
 ituns.open("/Users/moqikaka_zb/Documents/Projects/NewFreshMan/Client/Client/frameworks/runtime-src/proj.ios_mac/NewXiaoHua.xcodeproj")
 ituns.activate()
-# print(ituns.help("-h"))
-# print(ituns.help("-o"))
+print(ituns.help("-h"))
+print(ituns.help("-o"))
+print(ituns.help("-t run_"))
 # print(ituns.help("-t scheme"))
 # print(ituns.help("-t workspace_document"))
-print(ituns.workspace_documents['NewXiaoHua.xcodeproj'].run_destinations.get())
-ituns.workspace_documents['NewXiaoHua.xcodeproj'].run_()
+# print(ituns.workspace_documents['NewXiaoHua.xcodeproj'].run_destinations.get())
+# ituns.workspace_documents['NewXiaoHua.xcodeproj'].run_()
 
 
