@@ -23,9 +23,12 @@ from tkinter import messagebox
 from tkinter import Toplevel
 import math
 import traceback
+
+#增加搜索路径
+sys.path.append("./CommonTools/ui/")
 import mtk_Dalog
 
-sys.path.append("../")
+
 
 
 #tkinter Ui部分
@@ -100,6 +103,9 @@ class MyTest():
         self.gui.setButtonCallBack(self.logic.myTestFunc)
        
 def main():
+    
+
+
     root = tk.Tk() # 这里
     #fix the root window size
     root.minsize(840, 600)
