@@ -23,6 +23,7 @@ from tkinter import messagebox
 from tkinter import Toplevel
 import math
 import traceback
+import mtk_Dalog
 
 
 #tkinter Ui部分
