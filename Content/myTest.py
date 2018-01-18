@@ -25,6 +25,8 @@ import math
 import traceback
 import mtk_Dalog
 
+sys.path.append("../")
+
 
 #tkinter Ui部分
 class Gui():
