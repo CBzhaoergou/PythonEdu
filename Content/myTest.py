@@ -40,22 +40,16 @@ class Gui():
         self.__crateMianPage()
 
     def __defultFun(self):
-        print("这里是默认的回调函数")
+        #print("这里是默认的回调函数")
+        pass
     
     def __crateMianPage(self):
         # Tab Control introduced here --------------------------------------  
         tabControl = ttk.Notebook(self.root)           # Create Tab Control  
-
-        self.tab1 = ttk.Frame(tabControl)            # Create a tab   
-        tabControl.add(self.tab1, text='test1')      # Add the tab
+        self.tab1 = ttk.Frame(tabControl)              # Create a tab   
+        tabControl.add(self.tab1, text='Test')         # Add the tab
        
-        self.tab2 = ttk.Frame(tabControl)            # Add a second tab  
-        tabControl.add(self.tab2, text='test2')      # Make second tab visible 
-     
-        self.tab3 = ttk.Frame(tabControl)            # Add a third tab  
-        tabControl.add(self.tab3, text='test3')      # Make second tab visible
         self.__createTest1Ui()
-
         tabControl.pack(expand=1, fill="both")  # Pack to make visible
           
     def __createTest1Ui(self):
@@ -94,12 +88,15 @@ class Gui():
                 return False
             else:
                 return True
+
         def key(event):
             self.mC = event.char
-            # print(repr(self.mC))
+            pass
+
         def actionCmd(event):
             self.buttonCallBack()
             pass
+
         entry1 = tk.Entry(frame, textvariable = self.entry1Value,width = 10,validate = "key",validatecommand = validatecommand )
         entry1.grid(row = 0, column = 8,rowspan=2,sticky = tk.W+ tk.E)
         entry1.bind('<Return>',actionCmd)
@@ -135,7 +132,6 @@ class Gui():
         self.root.quit()
         obj1 = subprocess.Popen("python myTest.py",
                             shell = True,
-                            # cwd = ,
                             stdin = subprocess.PIPE,
                             stdout = subprocess.PIPE,
                             stderr = subprocess.PIPE,
@@ -177,18 +173,14 @@ class MyTest():
         self.gui.showDataToUi(tmpStr)
 
     
-
 def main():
-    
     root = tk.Tk() # 这里
-    #fix the root window size
     root.minsize(840, 600)
     root.maxsize(840, 600) #这里主要是控制窗口的大小，让窗口大小不能改变
-    root.title('测试环境') #设置主窗口的标题
+    root.title('赵日天大魔王的异常领域') #设置主窗口的标题
     mytools = MyTest(root)
-
     root.mainloop()   # 这里进入顶层窗口的循环
-
+    
 if __name__ == '__main__':
     main()
 
